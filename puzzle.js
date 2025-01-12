@@ -3,96 +3,96 @@
 //Usado?: Yes
   const middlewares = require('./middlewares');
 //--- Explicación: 
-
+//Importa el modulo middlewares de la ruta ./middlewares
 // -------------------------------------------------------------------------------------
 
 //Usado?: Yes
 const bodyParser = require('body-parser');
 //--- Explicación:
-
+//Importa el modulño body-parser qeu se usa para el analisis de soñicitudes Http
 // -------------------------------------------------------------------------------------
 
 //Usado?: Yes
 const session = require('express-session');
 //--- Explicación:
-
+//Importa express-session que se utiliza para gestionar sesiones
 // -------------------------------------------------------------------------------------
 
 //Usado?:  Yes
 const express = require('express');
 //--- Explicación:
-
+//Importa el modulo express
 // -------------------------------------------------------------------------------------
 
 //Usado?: Yes
 const bodyParser = require('body-parser');
 //--- Explicación:
-
+//Importa el modulño body-parser qeu se usa para el analisis de soñicitudes Http
 // -------------------------------------------------------------------------------------
 
 //Usado?: yes
 const session = require('express-session');
 //--- Explicación:
-
+//Importa express-session que se utiliza para gestionar sesiones
 // -------------------------------------------------------------------------------------
 
 //Usado?: Yes
 const dotenv = require('dotenv');
 //--- Explicación:
-
+//Importa la variables del archivo .env
 // -------------------------------------------------------------------------------------
 
 //Usado?: yes
 const middlewares = require('./middlewares');
 //--- Explicación:
-
+//Importa el modulo middlewares de la ruta ./middlewares
 // -------------------------------------------------------------------------------------
 
 //Usado?: yes
 const routes = require('./routes');
 //--- Explicación:
-
+//Importa el modulo routes de ./routes
 // -------------------------------------------------------------------------------------
 
 //Usado?: yes
 dotenv.config();
 //--- Explicación:
-
+//Carga la variables del archivo .env
 // -------------------------------------------------------------------------------------
 
 //Usado?: yes
 const app = express();
 //--- Explicación:
-
+//Hace en la constante app una instancia de express para usarla en mi proyecto
 // -------------------------------------------------------------------------------------
 
 //Usado?: yes
 const PORT = 4000;
 //--- Explicación:
-
+//Constante para guardar el purto.
 // -------------------------------------------------------------------------------------
 
 //Usado?: yes
 const dotenv = require('dotenv');
 //--- Explicación:
-
+//Importa la variables del archivo .env
 // -------------------------------------------------------------------------------------
 
 //Usado?: yes
 dotenv.config();
 //--- Explicación:
-
+//Carga la variables del archivo .env
 // -------------------------------------------------------------------------------------
 
 //Usado?: yes
 middlewares.setupApp(app);
 //--- Explicación: 
-
+//Introduce el parametro app en la función setupApp de middlewares
 // -------------------------------------------------------------------------------------
-
 //Usado?: Yes
 routes.setup(app);
 //--- Explicación: 
+//Intrpduce el parametro app en la función setup de routes
 
 // -------------------------------------------------------------------------------------
 
@@ -160,6 +160,9 @@ const setupAPP = (app) => {
     saveUninitialized: true,
   }));
 };
+//--- Explicación: 
+//Función que contiene los middlewares de body parser y session  para gestionar las solicitudes Http y la sesión de usuario respectivamente
+
 // -------------------------------------------------------------------------------------
 
 //Usado?: Yes
