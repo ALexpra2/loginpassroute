@@ -9,7 +9,7 @@
 //Usado?: Yes
 const bodyParser = require('body-parser');
 //--- Explicación:
-//Importa el modulño body-parser qeu se usa para el analisis de soñicitudes Http
+//Importa el modulo body-parser que se usa para el analisis de solicitudes Http
 // -------------------------------------------------------------------------------------
 
 //Usado?: Yes
@@ -27,7 +27,7 @@ const express = require('express');
 //Usado?: Yes
 const bodyParser = require('body-parser');
 //--- Explicación:
-//Importa el modulño body-parser qeu se usa para el analisis de soñicitudes Http
+//Importa el modulo body-parser que se usa para el analisis de solicitudes Http
 // -------------------------------------------------------------------------------------
 
 //Usado?: yes
@@ -69,7 +69,7 @@ const app = express();
 //Usado?: yes
 const PORT = 4000;
 //--- Explicación:
-//Constante para guardar el purto.
+//Constante para guardar el puerto.
 // -------------------------------------------------------------------------------------
 
 //Usado?: yes
@@ -92,7 +92,7 @@ middlewares.setupApp(app);
 //Usado?: Yes
 routes.setup(app);
 //--- Explicación: 
-//Intrpduce el parametro app en la función setup de routes
+//Introduce el parametro app en la función setup de routes
 
 // -------------------------------------------------------------------------------------
 
@@ -201,7 +201,7 @@ app.listen(PORT, () => {
   console.log(`Servidor en ejecución en http://localhost:${PORT}`);
 });
 //--- Explicación: 
-//ejacuta el servidor en el puerto especificado
+//Ejecuta el servidor en el puerto especificado
 // -------------------------------------------------------------------------------------
 
 //Usado?: Yes
