@@ -23,7 +23,7 @@ const verificarSesionMiddleware = (req, res, next) => {
     }
 };
 
-const setupAPP = (app) => {
+const setupApp = (app) => {
     app.use(bodyParser.urlencoded({ extended: true }));
     app.use(session({
         secret: 'secretoSuperSecreto',
@@ -36,5 +36,5 @@ const setupAPP = (app) => {
 module.exports = {
     validarPalabraMiddleware,
     verificarSesionMiddleware,
-    setupAPP,
+    setupApp,
 };

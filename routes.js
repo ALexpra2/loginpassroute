@@ -8,7 +8,6 @@ const setup = (app) => {
         if (req.session.palabraSecreta) {
             return res.redirect('/profile');
         }
-        //Aquí va código dentro
         res.send(`
         <html>
           <body>
