@@ -108,7 +108,7 @@ const validarPalabraMiddleware = (req, res, next) => {
   }
 };
 //--- Explicación: 
-
+//Middleware para validar la palabra secreta con la del archivo .env
 
 // -------------------------------------------------------------------------------------
 
@@ -125,7 +125,9 @@ const setup = (app) => {
   //Aquí va código dentro
 })}
 //--- Explicación: 
-
+/* Función con el parametro app en la que se introduciran las peticiones get y post de la app, getsinoando el mensaje de error que se va a mostrar 
+y redirigiendo a /profile si ya se ha introduciso en valor de la palabra secreta en la sesion
+ */
 
 // -------------------------------------------------------------------------------------
 
@@ -145,8 +147,8 @@ res.send(`
   </html>
 `);
 //--- Explicación: 
-
-
+/* Envia al servidor los datos html, tales como un h1, un mensaje de error previamente definido
+un input para introducir texto y un boton */
 // -------------------------------------------------------------------------------------
 
 //Usado?:Yes
@@ -170,14 +172,14 @@ app.post('/profile', middlewares.validarPalabraMiddleware, (req, res) => {
   `);
 });
 //--- Explicación: 
-
+//Crea una ruta /profile para enviarla al servidor, previamente validada por validarPalabraMiddleware con el html contenido en res.send (un h1, un metodo post para enviar los datos de formlario a logout y un boton)
 // -------------------------------------------------------------------------------------
 
 //Usado?: Yes
 app.use(bodyParser.urlencoded({ extended: true }));
 
 //--- Explicación: 
-
+//Creo que este codigo es redundante ya que esta contenido en la función setuApp
 // -------------------------------------------------------------------------------------
 
 //Usado?: Yes
@@ -188,7 +190,7 @@ app.use(session({
 }));
 
 //--- Explicación: 
-
+//Creo que este codigo es redundante ya que esta contenido en la función setuApp
 // -------------------------------------------------------------------------------------
 
 //Usado?: Yes
@@ -196,7 +198,7 @@ app.listen(PORT, () => {
   console.log(`Servidor en ejecución en http://localhost:${PORT}`);
 });
 //--- Explicación: 
-
+//ejacuta el servidor en el puerto especificado
 // -------------------------------------------------------------------------------------
 
 //Usado?: Yes
@@ -208,7 +210,7 @@ const verificarSesionMiddleware = (req, res, next) => {
   }
 };
 //--- Explicación: 
-
+//Crea un middleware que valida si existe la palabra secreta en la sesion para permitirnos entrar cuando se copia la url sin o nos redirige a / mostrando u n error
 // -------------------------------------------------------------------------------------
 
 
@@ -222,7 +224,7 @@ app.get('/profile', middlewares.verificarSesionMiddleware, (req, res) => {
   `);
 });
 //--- Explicación: 
-
+//Carga la pagina /profile previamente validada por el middleware verificarSesionMiddleware enviando el codigo html contenido en res.send (un h1, un metodo post para enviar los datos de formlario a logout y un boton)
 // -------------------------------------------------------------------------------------
 
 
@@ -236,7 +238,7 @@ app.post('/logout', (req, res) => {
   });
 });
 //--- Explicación: 
-
+//Envia al servidor informacion para borrar los datos de la sesion activa y redirige a /. Si hay cualquier error al eliminar lo muestra en consola
 // -------------------------------------------------------------------------------------
 
 //Usado?: Yes
@@ -244,7 +246,7 @@ module.exports = {
   setup,
 };
 //--- Explicación:
-
+//Exporta la funcion setup para ser usada
 // -------------------------------------------------------------------------------------
 
 //Usado?:
@@ -254,6 +256,6 @@ module.exports = {
   setupAPP,
 };
 //--- Explicación:
-
+//Exporta las funciones de los middlewares para ser usadas
 // -------------------------------------------------------------------------------------
 

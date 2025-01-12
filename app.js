@@ -9,6 +9,7 @@ const routes = require('./routes');
 middlewares.setupApp(app);
 routes.setup(app);
 
+//creo que este Código es redundante
 /* const session = require('express-session');
 
 const bodyParser = require('body-parser');
